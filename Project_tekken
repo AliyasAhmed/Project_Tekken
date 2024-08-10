@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+
+        .content {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            height: 2000px;
+            /* For demonstration purposes */
+        }
+
+        .section {
+            position: relative;
+            padding: 100px 20px;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section.parallax {
+            background-image: url('https://p325k7wa.twic.pics/high/tekken/tekken-7/00-page-setup/NEW/t7_background_desktop.jpg?twic=v1/cover-min=1880x637&quot;');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .scr {
+            background-image: url('https://img.uhdpaper.com/wallpaper/tekken-8-jin-kazama-vs-kazuya-mishima-425@1@j-preview.jpg?dl');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-position: fixed;
+            z-index: 3;
+        }
+
+        .sc {
+
+            background-position: fixed;
+            background-image: url('https://p325k7wa.twic.pics/high/tekken/tekken-8/00-page-setup/TEKKEN8_Header_desktop_2.jpg?twic=v1/cover-min=1900x643&quot;');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 2;
+            /* Ensure it is on top */
+        }
+        .para{
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 800;
+            padding: 10px; 
+            position: relative;
+        }
+
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .video {
+            position: relative;
+            display: inline-block;
+            padding: 100px 20px;
+            width: 250rem;
+        }
+
+        .video img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+
+        h1 {
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="https://static.bandainamcoent.eu/video/tk7_animated_header.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>Welcome to Tekken</h1>
+        <p>Scroll down to see the parallax effect!</p>
+    </div>
+    <div class="section parallax">
+        <h2>Section 1</h2>
+        <p class="para">Tekken 7, developed and published by Bandai Namco Entertainment, is the ninth installment in the Tekken series. It marks the conclusion of the long-running saga between the Mishima clan members, Heihachi Mishima, Kazuya Mishima, and Jin Kazama, exploring their turbulent family dynamics and intense rivalries. With new characters and the introduction of the Rage System, Tekken 7 adds fresh excitement and depth to its acclaimed fighting mechanics.</p>
+    </div>
+    <div class="section scr">
+
+        <h2>Section 2</h2>
+        <p class="para">Tekken 8 is the highly anticipated next chapter in the Tekken series, bringing a new level of intensity and realism to the fighting game genre. Leveraging the power of next-gen consoles, Tekken 8 features stunning graphics, lifelike character models, and dynamic environments. Players can expect an evolved combat system with new moves, enhanced mechanics, and a deeper story that continues the saga of the Mishima family and their allies.</p>
+    </div>
+    <div class="section sc">
+        <h2>Section 3</h2>
+        <p class="para">Jin Kazama, one of the central characters in the Tekken series, struggles with the Devil Gene within him. As he battles this internal demon, Jin seeks to end the cycle of hatred and violence that has plagued his family for generations. His journey is marked by intense conflicts, personal sacrifices, and a relentless pursuit of redemption, making him one of the most complex and compelling characters in the Tekken universe.</p>
+    </div>
+    <div class="video">
+        <img src="https://p325k7wa.twic.pics/high/tekken/tekken-7/00-page-setup/t7_game_thumb_408x314_2.jpg?twic=v1/resize=1110/step=10/quality=80"
+            alt="Video Thumbnail">
+    </div>
+    <div class="section parallax">
+        <h2>Section 4</h2>
+        <p class="para">Kazuya Mishima, driven by a deep-seated desire for power and revenge, is one of Tekken's most iconic antagonists. After being thrown into a volcano by his father Heihachi, Kazuya miraculously survived, emerging stronger and more vengeful than ever. His ruthless pursuit of control over the Mishima Zaibatsu and his battles against his own son, Jin, highlight the dark and destructive nature of the Mishima family feud.</p>
+    </div>
+    <div class="section scr">
+        <h2>Section 5</h2>
+        <p class="para">The Tekken series is renowned for its diverse cast of characters, each with unique fighting styles and rich backstories. From the enigmatic Yoshimitsu to the fierce and agile Ling Xiaoyu, players can explore a wide array of martial arts techniques and character dynamics. Tekken's roster continues to expand with each installment, introducing new fighters and deepening the lore of the Tekken universe.</p>
+    </div>
+
+</body>
+
+</html>
